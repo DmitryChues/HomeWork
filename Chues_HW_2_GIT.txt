@@ -25,7 +25,16 @@ GitHub. HW_2
 	i (-- INSERT --)
 		Summary: A short description of the problem
 		Project: Name of the tested project
-		...........
+		Component: Name of the part or function of the product being tested
+		Version: The version on which the bug was found
+		Severity: This is an attribute that characterizes the impact of a defect on the performance of an application
+		Priority: This is an attribute that indicates the order in which a task or defect should be resolved
+		Status: Bug status
+		Author: Bug report creator
+		Assigned To: The name of the person assigned to resolve the problem
+		Environment: Information about the environment where the bug was found
+		Steps to Reproduce: Steps by which you can easily reproduce the situation that led to the error
+		Actual result: The result after going through the steps to reproduce
 		Expected Result: Expected correct result
 		Attachment: Log file, screenshot or any other document that can help
 	esc :wq
