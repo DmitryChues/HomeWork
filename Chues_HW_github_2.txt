@@ -1,0 +1,64 @@
+GitHub. HW_2
+	git clone https://github.com/DmitryChues/Studies.git
+	cd Studies/
+1. На локальном репозитории сделать ветки для:
+- Postman
+	git branch Postman
+- Jmeter
+	git branch Jmeter
+- CheckLists
+	git branch CheckLists
+- Bug Reports
+	git branch Bug_Reports
+- SQL
+	git branch SQL
+- Charles
+	git branch Charles
+- Mobile testing
+	git branch Mobile_testing
+
+2. Запушить все ветки на внешний репозиторий
+	git push -u origin Bug_Reports Charles CheckLists Jmeter Mobile_testing Postman SQL
+3. В ветке Bug Reports сделать текстовый документ со структурой баг репорта
+	git checkout Bug_Reports
+	vim structure.txt
+	i (-- INSERT --)
+		Severity: This is an attribute that characterizes the impact of a defect on the performance of an application
+		Priority: This is an attribute that indicates the order in which a task or defect should be resolved
+		Status: Bug status
+		Author: Bug report creator
+		Assigned To: The name of the person assigned to resolve the problem
+		Environment: Information about the environment where the bug was found
+		Steps to Reproduce: Steps by which you can easily reproduce the situation that led to the error
+		Actual result: The result after going through the steps to reproduce
+		Expected Result: Expected correct result
+		Attachment: Log file, screenshot or any other document that can help
+	esc :wq
+4. Запушить структуру багрепорта на внешний репозиторий
+	git add structure.txt
+	git commit -m "bug report structure"
+	git push
+5. Вмержить ветку Bug Reports в Main
+	git checkout main
+	git merge Bug_Reports
+6. Запушить main на внешний репозиторий.
+	git push
+7. В ветке CheckLists набросать структуру чек листа.
+	git checkout CheckLists
+	vim structure_checklist.txt
+		List of checks (with the required detail)
+		Check status:
+		build that was tested
+		test environment (if applicable)
+		tester
+		Result of checking
+	esc :wq
+8. Запушить структуру на внешний репозиторий
+	git add structure_checklist.txt
+	git commit -m "checklist structure"
+	git push
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+	go to https://github.com/DmitryChues/Studies --> Compare & pull request --> Create pull request --> Merge pull request --> Confirm merge
+10. Синхронизировать Внешнюю и Локальную ветки Main
+	git checkout main
+	git pull
