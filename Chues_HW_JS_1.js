@@ -56,6 +56,9 @@ function checkAge(age) {
 }
 
 checkAge("17");
-checkAge(18);
-checkAge(61);
-checkAge(prompt("Enter your age:"));
+checkAge("18");
+checkAge("61");
+checkAge("cvcxv");
+checkAge("2a");
+let userAge = prompt("Enter user's age:")
+checkAge(userAge);
